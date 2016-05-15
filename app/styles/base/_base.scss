@@ -1,0 +1,434 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+/*
+ * colors
+ *
+ * * cyan: #29c2e1
+ * * light-cyan: #e5eef0
+ * * dark-cyan: #93a1a7
+ * * orange: #f69b37
+ * * black: #23282f
+ * * light-black: #55595f
+ * * lighter-black: #93a1a7
+ *
+ * */
+
+/*
+ * typography
+ *
+ * */
+body {
+  background: url(../images/blue-background.png) no-repeat bottom right;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #23282f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.section-subtitle{
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: #23282f;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/*
+ * elements
+ *
+ * */
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.container
+{
+  max-width: 1145px;
+  margin: 0 auto;
+}
+
+/*
+ * stats
+ *
+ * */
+.company-stats div{
+  padding-left: 80px;
+}
+
+.company-stats{
+  padding:80px 0;
+}
+
+.company-stats-wrapper-cyan{
+  padding: 100px 0 80px 0;
+  background-color: #e5eef0;
+}
+
+.company-stats h1{
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  overflow: hidden;
+  text-indent: -999px;
+  white-space: nowrap;
+}
+
+.company-stats h2{
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+}
+
+.company-stats span{
+  display: block;
+  font-size: 60px;
+}
+
+.company-stats div.years-marketing{
+  background: url("../images/icons/years-in-marketing-icon.png") no-repeat left;
+}
+.company-stats div.team-members{
+  background: url("../images/icons/team-members-icon.png") no-repeat left;
+}
+.company-stats div.finished-projects{
+  background: url("../images/icons/Finished-Projects-icons.png") no-repeat left;
+}
+.company-stats div.certifications{
+  background: url("../images/icons/certification-icon.png") no-repeat left;
+}
+
+/* blog-side
+ *
+ * */
+.blog-sidebar {
+  max-width: 292px;
+  padding-left: 30px;
+  margin-top: 100px;
+}
+.blog-sidebar-categories-wrapper, .blog-sidebar-popular-posts, .blog-sidebar-tagswrapper {
+  margin: 60px 0;
+}
+.blog-sidebar-search {
+  position: relative;
+}
+.blog-sidebar input{
+  width: 260px;
+  height: 45px;
+  border: 1px solid #e5eef0;
+  padding-left: 15px;
+  color: #303030;
+  font-size: 14px;
+}
+.blog-sidebar button {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 10px;
+  left: 220px;
+}
+.blog-sidebar-header {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #23282f;
+  margin: 20px 0;
+}
+.blog-sidebar-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.blog-sidebar-categories li {
+  padding: 13px 0;
+  display: block;
+}
+.blog-sidebar-categories a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #55595f;
+  font-size: 13px;
+  font-family: 'Karla', sans-serif;
+}
+.blog-sidebar-categories a i {
+  float: right;
+}
+.blog-sidebar-categories a:hover {
+  color: #f69b37;
+}
+
+.blog-sidebar-post {
+  margin: 30px 0;
+}
+.blog-sidebar-post-img {
+  display: inline-block;
+  float: left;
+}
+.blog-sidebar-post-details {
+  padding: 10px 0 10px 30px;
+  float: left;
+  font-family: 'Karla', sans-serif;
+}
+.blog-sidebar-post-details-header {
+  margin: 0;
+}
+.blog-sidebar-post-details a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 15px;
+  color: #23282f;
+}
+.blog-sidebar-post-details p:first-letter {
+  text-transform: capitalize;
+}
+.blog-sidebar-post-details p {
+  text-transform: capitalize;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #55595f;
+}
+.blog-sidebar-post-details span {
+  color: #f69b37;
+}
+.blog-sidebar-post-details span:after {
+  content: ':';
+  padding: 0 5px;
+}
+.blog-sidebar-tags ul {
+  padding: 0;
+}
+.blog-sidebar-tags li {
+  display: inline-block;
+}
+.blog-sidebar-tags a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: 'Karla', sans-serif;
+  padding: 15px;
+  background-color: #29c2e1;
+  color: #e5eef0;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+}
+
+
+/*
+ * icons
+ *
+ */
+span.icon-boost-business{
+  background: url(../images/icons/boost-your-business-icon.png) no-repeat center;
+}
+span.icon-filter-business{
+  background: url(../images/icons/filtering-business-data-icon.png) no-repeat center;
+}
+span.icon-business-solutions{
+  background: url(../images/icons/business-solutions-icon.png) no-repeat center;
+}
+span.icon-data-entry{
+  background: url(../images/icons/data-entry-icon.png) no-repeat center;
+}
+span.icon-client-management{
+  background: url(../images/icons/client-management-icon.png) no-repeat center;
+}
+span.icon-better-communication{
+  background: url(../images/icons/better-communication-icon.png) no-repeat center;
+}
+span.icon-well-analyzing-team{
+  background: url(../images/icons/well-analyzing-team-icon.png) no-repeat center;
+}
+span.icon-24-hour-support{
+  background: url(../images/icons/24-hour-support-icon.png) no-repeat center;
+}
+span.icon-keeping-business-data{
+  background: url(../images/icons/keeping-business-data-icon.png) no-repeat center;
+}
+
+span.icon{
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin: 0 40px 60px 0;
+  background-color: #e5eef0;
+}
+
+span.icon:hover{
+  background-color: #f69b37;
+}
+
+
+/*
+ * Features
+ *
+ */
+.features-wrapper{
+  padding-bottom: 95px;
+}
+
+.features-wrapper.triangle-background {
+  background: url(../images/features-bg.png) no-repeat bottom right;
+}
+
+.features-wrapper.general {
+  border-bottom: solid 1px #e5eef0;
+}
+
+/*
+ *
+ * sign up - offer
+ *
+ */
+section.offer {
+  height: 320px;
+  text-align: center;
+  font-weight: 400;
+  border-bottom: 1px solid #e5eef0;
+}
+.offer .offer-title {
+  color: #000;
+  font-size: 30px;
+  margin: 0;
+}
+.offer .offer-title .special {
+  color: #f69b37;
+}
+.offer .offer-note {
+  color: #59686c;
+  font-size: 14px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.offer .offer-title + .offer-note {
+  margin: 0;
+}
+.offer .description + .actions {
+  margin-top: 30px;
+}
+.offer .actions .btn +.btn {
+  margin-left: 20px;
+}
+.offer .offer-content-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.offer .btn-primary {
+  padding: 0 40px;
+}
+/*
+ *
+ * team section
+ *
+ */
+.team {
+  background-color: #e5eef0;
+}
+.team-wrapper {
+  margin: 65px 0;
+}
+.team-member-img img{
+  vertical-align: top;
+}
+.team-member-contact {
+  height: 125px;
+  width: 263px;
+  background-color: #fff;
+  padding-left: 30px;
+}
+.team-member-contact p {
+  padding-top: 30px;
+  font-size: 14px;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+.team-member-contact ul {
+  width: 80px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.team-member-contact li {
+  float: left;
+  width: 33.33%;
+}
+.social-icons {
+  background-position: 0 0;
+  width: 15px;
+  height: 32px;
+  display: inline-block;
+}
+.facebook {
+  background: url(../images/icons/facebook.png) no-repeat center left;
+}
+.twitter {
+  background: url(../images/icons/twitter.png) no-repeat center left;
+}
+.google {
+  background: url(../images/icons/google+.png) no-repeat center left;
+}
+
+.team-member-contact span {
+  font-size: 14px;
+  font-family: 'Karla', sans-serif;
+  color: #f69b37;
+  text-transform: capitalize;
+}

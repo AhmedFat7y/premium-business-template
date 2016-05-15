@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/*
+ * buttons links
+ * */
+.btn {
+  display: inline-block;
+  font-family: 'Karla', sans-serif;
+  font-size: 14.5px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  line-height: 40px;
+  padding: 0 25px;
+  border-radius: 40px;
+}
+
+.btn-primary {
+  background-color: #29c2e1;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #f69b37;
+  color: #fff;
+}
+
