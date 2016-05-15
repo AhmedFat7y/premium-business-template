@@ -1,11 +1,11 @@
 {
-  "name": "simple-html-website",
+  "name": "premium-business-template",
   "version": "1.1.0",
-  "description": "Workflow using Grunt to build HTML websites with ease.",
-  "author": "Ahmad Alfy <ahmad@alfy.me>",
+  "description": "Premium Business Template implemented to be added to portfolio",
+  "author": "Ahmad Abdelwahab <ahmed.abdel-wahab@robustastudio.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadalfy/simple-html-project.git"
+    "url": "https://github.com/AhmedFat7y/premium-business-template.git"
   },
   "devDependencies": {
     "apache-server-configs": "^2.14.0",

@@ -1,4 +1,4 @@
-# Simple HTML Project
+# Premium Business Template
 
 Simple workflow using grunt to build HTML pages with HTML and Sass. The workflow also features a lot of optimizations like building SVG-sprites, properly injecting dependencies into Sass and Jade files, files and directory structure that would speed up development and a lot more.
 
@@ -27,3 +27,7 @@ More information and details about the configurations will be posted shortly.
 
 - Run `grunt serve` to see the live HTML.
 - Run `grunt` to create a build. A build is created in the directory called `dist`.
+
+## Acknowledgement
+This workflow is taken from the template in this repository https://github.com/ahmadalfy/simple-html-project
+Ahmad Alfy is my mentor, the one who taught me to write semantic web pages and optimize my work flow.
