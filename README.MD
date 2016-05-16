@@ -21,7 +21,10 @@ More information and details about the configurations will be posted shortly.
 ## Steps
 
 - Install the node packages using `npm install`.
+-- Use `sudo npm install` if faced with any permission error
 - Install the front-end packages using `bower install`.
+-- If you face any permission error reading `/Users/Andreas/.config/configstore/` change the ownership of that folder to your user. http://stackoverflow.com/questions/29865913/getting-a-permission-error-when-installing-with-bower
+
 
 ## Serving the HTML and creating a build
 
