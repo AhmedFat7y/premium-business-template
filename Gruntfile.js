@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         tasks: ['babel:test', 'test:watch']
       },
       jade: {
-        files: ['<%= config.app %>/{,*/}*.jade'],
+        files: ['<%= config.app %>/pages/{,*/}*.jade'],
         tasks: ['jade']
       },
       gruntfile: {
@@ -222,8 +222,8 @@ module.exports = function (grunt) {
       app: {
         ignorePath: /^\/|\.\.\//,
         src: [
-          '<%= config.app %>/includes/_head.jade',
-          '<%= config.app %>/includes/_scripts.jade',
+          '<%= config.app %>/pages/includes/_head.jade',
+          '<%= config.app %>/pages/includes/_scripts.jade',
         ],
         exclude: [
           'bower_components/modernizr/modernizr.js'
@@ -276,7 +276,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= config.app %>',
+          cwd: '<%= config.app %>/pages',
           dest: '.tmp',
           src: '*.jade',
           ext: '.html'
